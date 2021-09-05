@@ -1,0 +1,126 @@
+$Black :#1B224C;
+$Orange:#F5A623;
+$white:#FFFFFF;
+$dblue:#1B224C;
+
+
+
+
+//レスポンシブ
+
+@mixin OverTab {
+  @media screen and(min-width:1000px){
+    @content; 
+  }
+}
+
+@mixin MidTab {
+  @media screen and(min-width:800px){
+    @content; 
+  }
+}
+
+@mixin SmallTab {
+  @media screen and(min-width:600px){
+    @content; 
+  }
+}
+@mixin SSmallTab {
+  @media screen and(min-width:485px){
+    @content; 
+  }
+}
+
+
+//パンくず
+.pan{
+  background-color: #F8F8F8;
+  text-align: left;
+  height: 50px;
+  padding-right: 10px;
+  padding-left:10px;
+  box-sizing: border-box;
+
+  @include MidTab{
+    padding-right: 0px;
+    padding-left:0px;
+
+  }
+
+
+ 
+  .breadcrumbs{
+    max-width: 900px;
+    width: 100%;;
+    margin: 0 auto;
+    line-height:50px;
+    font-size: 12px;
+
+    & a{
+      color:$Black;
+    }
+  }
+}
+
+
+//ページネーション
+.pagination{
+
+  ul.page-numbers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px ;
+
+
+    li{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $dblue;
+      color: white;
+      
+      & + li{
+        margin-left:20px;
+
+      }
+
+
+
+      a{
+        background-color: white;
+        color: $dblue;
+        display: block;
+        padding: 17px 19.6px ;
+        text-decoration: none;
+        border: 1px solid $dblue;
+    
+      }
+
+      span.dots{
+        background-color:$white;
+        color: $dblue;
+        padding: 17px 19.6px ;
+      }
+    }
+  }
+
+}
+
+#mask{
+  display: none;
+  
+  &.-active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+    display: block;
+  }
+}

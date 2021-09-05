@@ -1,0 +1,106 @@
+@import "./general";
+
+#work{
+  text-align: center;
+  background-color:$dblue;
+  color: $white;
+  padding-top:58px;
+  padding-bottom:68px;
+  
+  
+
+  h2{
+    font-size:36px;
+    padding-bottom: 60px;
+
+    @include SmallTab{
+      padding-bottom: 137px;
+
+    }
+  }
+
+
+  .w-container{
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+   .w-item{
+     width:280px;
+     
+
+     & +.w-item{
+       padding-left:0px;
+       padding-top: 30px;
+
+    
+
+      @include SmallTab{
+        padding-left:30px;
+        padding-top: 0px;
+      }
+     }
+    
+
+      h3{
+        font-size:16px;
+        line-height: 29px;
+        padding-bottom: 9px;
+        text-align: left;
+      }
+
+      .w-image{
+        background-color: $white;
+        margin-bottom: 19px;
+
+        img{
+
+        }
+      }
+
+      .w-discription{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+        p{
+          background-color: $white;
+          color: $dblue;
+          font-size: 16px;
+          line-height: 32px;
+          // font-size: 30px;
+          // flex:1;
+          text-align: left;
+          margin-bottom: 10px;
+
+          &:first-child{
+            width:100px;
+            padding-left:10px;
+            margin-right:8px;
+          }
+
+          &:nth-child(2){
+            flex: 1;
+            padding-left: 14px;
+          }
+          
+          &:last-child{
+            flex:1;
+            padding-left: 14px;
+
+          }
+        }
+      }
+    }
+
+
+
+  }
+
+ 
+
+}

@@ -1,0 +1,59 @@
+@import "./general";
+
+#plan{
+  text-align: center;
+  position: relative;
+  margin-bottom:20px ;
+  margin-left: 10px;
+  margin-right:10px;
+
+  @include SmallTab{
+    margin-bottom:39px ;
+  }
+
+  div.p-image{
+    img{
+      max-width: 906px;
+      width: 100%;;
+    }
+  }
+
+  .p-container{
+    color: $white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    h2{
+      font-size: 22px;
+      padding-bottom: 15px;
+      padding-bottom: 20px;
+      
+      @include SmallTab{
+        padding-bottom: 27px;
+        font-size: 26px;
+      }
+    }
+    
+    .p-btn{
+      display: inline-block;
+      
+      a{
+        font-size: 16px;
+        padding:10px 20px;
+        display: block;
+        border-radius: 35px;
+        border: 1px solid $white;
+        text-decoration: none;
+        color:$white;
+
+        @include SmallTab{
+          padding:16px 44px;
+        }
+      }
+    }
+
+  }
+}

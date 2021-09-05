@@ -1,0 +1,231 @@
+@import "./general";
+
+#course-top{
+
+  .t-image{
+    position:relative;
+
+    img{
+      width:100%;
+      min-height: 100px;
+    }
+
+    h1{
+      position: absolute;
+      top:50%;
+      left:50%;
+      // width: 100%;
+      transform: translate(-50% ,-50%);
+      color: white;
+      font-size: 16px;
+
+      @include SmallTab{
+        font-size:26px
+      }
+      
+      @include MidTab{
+        font-size:32px;
+
+      }
+      
+    }
+  }
+}
+
+#price{
+
+  .p-inner{
+    max-width: 900px;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    padding-left:20px ;
+    padding-right: 20px;
+    box-sizing: border-box;
+
+    @include SmallTab{
+      padding-left:0px ;
+      padding-right: 0px;
+    }
+
+    h2{
+      font-size:32px;
+      padding-bottom: 60px;
+      padding-top: 58px;
+    }
+
+    .p-contents{
+        display: flex;
+        justify-content:  center;
+        line-height: 70px;
+
+        @include SmallTab{
+          line-height: 90px;
+        }
+        
+   
+
+      p{
+        background-color: $dblue;
+        color:white;
+        font-size:16px;
+        width: 220px;
+        height: 70px;
+        
+        @include SmallTab{
+          width: 280px;
+          height: 90px;
+          font-size:22px;
+          line-height: 90px;
+        }
+
+        }
+
+      span{
+        font-size:22px;
+        padding-left: 35px;
+        padding-right: 35px;
+        
+      }
+      
+    }
+
+    .p-discriprion{
+      padding-top: 45px;
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+
+  }
+}
+
+#plan-detail{
+  text-align: center;
+
+  .plan-detail-inner{
+
+    h2{
+      font-size: 32px;
+      padding-top:90px;
+      padding-bottom:90px;
+  
+    }
+
+    .p-contents{
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+
+      @include OverTab{
+        overflow-x: none;
+      }
+      
+
+    
+      .p-item{
+        width: 220px;
+        flex: 0 0 auto;
+
+        & +.p-item{
+          padding-left: 6px;
+        }
+
+        span{
+          // position: absolute;
+          width: 220px;
+          height: 36px;
+          background-color: $Orange;
+          color: $white;
+          // left:0px;
+          // top:-36px;
+          font-weight: bold;
+          display: block;
+          line-height: 52px;
+          
+        }
+
+        .p-title{
+         
+          line-height:60px;
+          height: 60px;
+          background-color: $dblue;
+
+          
+
+          &.recommend{
+            background-color: $Orange;
+            // position: relative;
+          }
+          
+          h3{
+            font-size: 16px;
+            color: $white;
+          }
+        }
+
+      
+        .p-text{
+          border: 0.5px solid #1B224C;
+          height: 414px;
+          margin-bottom: 60px;
+
+          
+          &>p{
+            font-size:25px;
+            padding-top:30px;
+            
+
+            & +p{
+              padding-top: 14px;
+              font-size:16px;
+              padding-bottom: 48px;
+            }
+          }
+
+
+          ul{
+
+            li{
+              display: inline-block;
+              list-style-type: none!important;/*ポチ消す*/
+              position: relative;
+
+              &+ li{
+                padding-top:23px;
+              }
+
+              &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: -20px;
+                width: 10px;
+                height: 5px;
+                border-left: 3px solid $dblue;
+                border-bottom: 3px solid $dblue;
+                transform: rotate(-45deg);
+                
+              
+                
+              }
+            }
+          }
+
+          .text-list{
+
+            p{
+              font-size: 16px;
+            }
+          }
+        
+        }
+      }
+    }
+
+  }
+
+}
